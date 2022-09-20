@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Milada Gudkova](https://up.htmlacademy.ru/htmlcss/35/user/2144201).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Рыбаков] (https://htmlacademy.ru/profile/viktor-rybakov).
 
 ---
 
