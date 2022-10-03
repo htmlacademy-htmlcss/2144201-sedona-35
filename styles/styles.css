@@ -1,0 +1,11 @@
+.hero-welcome {
+  background-color: #82B3D3;
+  background-image: url("/images/hero-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.subsribe {
+  background-color: #82B3D3;
+  background-image: url("/images/subscribe-background.jpg");
+  background-repeat: no-repeat;
+}
