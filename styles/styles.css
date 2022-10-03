@@ -1,3 +1,26 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
+
 .hero-welcome {
   background-color: #82B3D3;
   background-image: url("/images/hero-background.jpg");
@@ -8,4 +31,6 @@
   background-color: #82B3D3;
   background-image: url("/images/subscribe-background.jpg");
   background-repeat: no-repeat;
+  width: 1400px;
+  height: 414px;
 }
