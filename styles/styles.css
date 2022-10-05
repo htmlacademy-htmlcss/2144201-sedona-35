@@ -23,7 +23,7 @@ body {
   background-color: #FFFFFF;
 }
 
-/* Кнопки */
+/* Buttons */
 .button-small {
   font-weight: 700;
   font-size: 16px;
@@ -56,7 +56,7 @@ body {
   background-color: #7DB54F;
 }
 
-/* Шапка */
+/* Header */
 .page-header {
   background-color: #FFFFFF;
   color: #000000;
@@ -73,7 +73,7 @@ body {
   background-color: inherit;
 }
 
-/* Разделы */
+/* Sections */
 .hero {
   background-color: #FFFFFF;
   color: #000000;
@@ -153,7 +153,7 @@ body {
   line-height: 26px;
 }
 
-/* Подвал */
+/* Footer */
 .page-footer {
   background-color: #FFFFFF;
   color: #000000;
@@ -168,7 +168,7 @@ body {
   text-decoration: none;
 }
 
-/* catalog */
+/* Catalog search */
 .catalog-search {
   background-color: #82B3D3;
   color: #FFFFFF;
@@ -208,6 +208,7 @@ body {
   line-height: 28px;
 }
 
+/* Pagination */
 .pagination-link {
   font-weight: 700;
   font-size: 20px;
