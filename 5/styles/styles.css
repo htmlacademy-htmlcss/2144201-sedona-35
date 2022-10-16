@@ -22,6 +22,7 @@ html {
 /* Body */
 body {
   display: flex;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -31,6 +32,9 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 1200px;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px #00000020;
@@ -172,6 +176,8 @@ fieldset {
 
 /* Body */
 .main-index {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -184,6 +190,7 @@ fieldset {
   background-position: bottom, center;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 69px;
   padding-top: 51px;
   padding-bottom: 82px;
 }
@@ -195,14 +202,14 @@ fieldset {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 69px;
-  padding-bottom: 25px;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .advantages-head {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
   margin-bottom: 90px;
   text-align: center;
 }
@@ -219,6 +226,7 @@ fieldset {
 .advantages-item {
   display: flex;
   flex-basis: 400px;
+  flex-grow: 1;
   object-fit: cover;
   min-height: 384px;
   justify-content: center;
@@ -252,6 +260,7 @@ fieldset {
 .recommendations-item {
   display: flex;
   flex-basis: 400px;
+  flex-grow: 1;
   min-height: 384px;
   justify-content: center;
   align-items: center;
@@ -291,6 +300,24 @@ recommendations-description {
   text-align: center;
   padding-top: 96px;
   padding-bottom: 104px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-index .button,
+.subscribe-catalog .button {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.subscribe-input {
+  width: 452px;
+  border-radius: 4px 0px 0px 4px;
+  min-height: 52px;
+  box-sizing: border-box;
 }
 
 .subscribe-catalog {
@@ -357,7 +384,7 @@ recommendations-description {
 }
 
 .catalog-filter-group {
-  padding-left: 0;
+  padding: 0;
 }
 
 .catalog-filter-title {
@@ -366,6 +393,13 @@ recommendations-description {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 32px;
+}
+
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
 }
 
 /* Search results */
@@ -406,6 +440,15 @@ recommendations-description {
   margin-bottom: 16px;
 }
 
+.hotel-card p:last-child {
+  margin: 0;
+}
+
+.hotel-card img {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 .hotel-title {
   font-weight: 700;
   font-size: 24px;
@@ -431,6 +474,10 @@ recommendations-description {
   margin-right: 8px;
   width: 60px;
   height: 60px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-link {
