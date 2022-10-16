@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="overlay">
+    <div class="page-container">
       <!-- Header -->
       <header class="page-header" data-test="header">
         <nav class="navigation">
@@ -26,30 +26,32 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span>12</span>
-              </a>
-            </li>
-          </ul>
-
-          <button type="button" class="button button-small brown">Хочу сюда!</button>
+          <div class="navigation-user">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">
+                  <span class="visually-hidden">Избранное</span>
+                  <span>12</span>
+                </a>
+              </li>
+            </ul>
+            <button type="button" class="button button-small brown">Хочу сюда!</button>
+          </div>
         </nav>
       </header>
 
       <main class="main-index" data-test="main">
         <!-- Hero -->
         <section class="hero" data-test="hero">
-          <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-          <img class="hero-welcome" src="images/welcome.svg" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!" width="458" height="352">
+          <div class="hero-main">
+            <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+            <img class="hero-welcome" src="images/welcome.svg" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!" width="458" height="352">
+          </div>
           <p class="hero-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         </section>
 
@@ -62,8 +64,10 @@
               <article>
                 <h3 class="advantages-title">Настоящий городок</h3>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-                <img src="images/sedona-town.jpg" alt="Домики на фоне гор." width="800" height="384">
               </article>
+            </li>
+            <li class="advantages-item">
+              <img src="images/sedona-town.jpg" alt="Домики на фоне гор.">
             </li>
             <li class="advantages-item">
               <article>
@@ -84,8 +88,10 @@
               </article>
             </li>
             <li class="advantages-item">
+              <img src="images/devils-bridge.jpg" alt="Мост Дьявола на фоне каньона.">
+            </li>
+            <li class="advantages-item">
               <article>
-                <img src="images/devils-bridge.jpg" alt="Мост Дьявола на фоне каньона." width="800" height="384">
                 <h3 class="advantages-title">Там есть мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </article>
@@ -93,10 +99,10 @@
           </ul>
         </section>
 
-        <!-- Reccommendations -->
+        <!-- Recommendations -->
         <section class="recommendations">
           <h2 class="visually-hidden">Рекомендуем</h2>
-          <ul>
+          <ul class="recommendations-list">
             <li class="recommendations-item">
               <article>
                 <h3 class="recommendations-title">Жильё</h3>
@@ -132,9 +138,11 @@
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-input" type="email" name="subscribe-input" id="subscribe-input" placeholder="Ваш e-mail">
-            <button type="submit" class="button button-big blue">Подписаться</button>
-          </form>
+            <div class="form-container">
+              <input class="subscribe-input" type="email" name="subscribe-input" id="subscribe-input" placeholder="Ваш e-mail">
+              <button type="submit" class="button button-big blue">Подписаться</button>
+            </div>
+          <form>
         </section>
       </main>
 
