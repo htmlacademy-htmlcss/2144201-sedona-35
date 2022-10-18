@@ -169,9 +169,46 @@ fieldset {
   padding: 16px 20px;
 }
 
+.navigation-item-search {
+  width: 44px;
+  height: 64px;
+  background-color: #FFFFFF;
+  background-image: url("../images/search.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-item-like {
+  width: 44px;
+  height: 64px;
+  background-color: #FFFFFF;
+  background-image: url("../images/like.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.like-count {
+  position: absolute;
+  transform: translate(20px, 11px);
+  padding: 5px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  z-index: 1;
+}
+
 .header-logo {
+  position: relative;
+  margin-bottom: -6px;
   display: flex;
   align-self: flex-start;
+  z-index: 1;
 }
 
 /* Body */
@@ -187,7 +224,7 @@ fieldset {
   background-image: url("../images/divider.svg"), url("../images/background-hero.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
-  background-position: bottom, center;
+  background-position: center bottom, center;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 69px;
@@ -223,25 +260,32 @@ fieldset {
   flex-wrap: wrap;
 }
 
-.advantages-item {
+.advantages-item,
+.advantages-picture-text {
   display: flex;
   flex-basis: 400px;
-  flex-grow: 1;
   object-fit: cover;
   min-height: 384px;
   justify-content: center;
   align-items: center;
 }
 
-.advantages-item img {
-  flex-grow: 2;
+.advantages-picture {
+  width: 100%;
+  background: #82B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-picture img {
   object-fit: cover;
   vertical-align: top;
 }
 
 .advantages-item article,
-.recommendations-item article {
-  width: 230px;
+.recommendations-item article,
+.advantages-picture-text div {
+  padding-left: 85px;
+  padding-right: 85px;
 }
 
 .advantages-item:nth-child(4n-3) {
@@ -286,8 +330,7 @@ recommendations-description {
 }
 
 .search {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 304px;
   text-align: center;
 }
 
@@ -298,9 +341,8 @@ recommendations-description {
   background-repeat: no-repeat;
   background-size: 100% auto;
   text-align: center;
-  padding-top: 96px;
-  padding-bottom: 104px;
-}
+  padding: 96px 258px 104px;
+  }
 
 .form-container {
   display: flex;
@@ -348,6 +390,10 @@ recommendations-description {
 }
 
 /* Catalog search */
+.catalog-header {
+  margin-bottom: 40px;
+}
+
 .catalog-search {
   background-color: #82B3D3;
   color: #FFFFFF;
@@ -368,8 +414,7 @@ recommendations-description {
 
 .breadcrumbs {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .breadcrumbs-item {
@@ -384,6 +429,7 @@ recommendations-description {
 }
 
 .catalog-filter-group {
+  margin: 0;
   padding: 0;
 }
 
@@ -430,31 +476,48 @@ recommendations-description {
 }
 
 .hotel-card {
+  display: flex;
+  align-items: stretch;
+  width: 340px;
+  box-sizing: border-box;
   border: solid 1px #E6E6E6;
   border-radius: 4px;
-  width: 340px;
+  padding: 20px;
 }
 
-.hotel-card p {
-  margin-top: 0;
-  margin-bottom: 16px;
+.hotel-article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  gap: 16px;
 }
 
-.hotel-card p:last-child {
+.hotel-article p {
   margin: 0;
 }
 
-.hotel-card img {
-  margin-top: 0;
-  margin-bottom: 16px;
+.hotel-article p:last-child {
+  margin: 0;
 }
 
 .hotel-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin: 0;
+}
+
+.hotel-article img {
+  order: -1;
+}
+
+.hotel-article .button {
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 140px;
+  align-content: space-between;
 }
 
 /* Pagination */
@@ -534,4 +597,15 @@ recommendations-description {
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
