@@ -160,18 +160,6 @@ fieldset {
   padding: 16px 20px;
 }
 
-/*
-.navigation-link-current {
-  position: relative;
-  background-color: #756257;
-  height: 2px;
-  width: 94px;
-  margin: 0;
-  padding: 0;
-  top: 44px;
-}
-*/
-
 .navigation-user-item {
   min-width: 44px;
   min-height: 64px;
@@ -475,6 +463,8 @@ recommendations-description {
 }
 
 .search-total {
+  margin: auto;
+  margin-left: 0;
   margin-right: 200px;
 }
 
@@ -498,6 +488,7 @@ recommendations-description {
 /* Search results layouts */
 .results-layout-list {
   display: flex;
+  align-items: center;
   gap: 8px;
   width: 160px;
   margin-left: auto;
@@ -646,6 +637,7 @@ recommendations-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0;
 }
 
