@@ -16,7 +16,7 @@
             <img class="header-logo" src="images/header-logo.svg" alt="Герб Седоны." height="70" width="140">
           </a>
 
-          <ul class="navigation-list">
+          <ul class="navigation-menu">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
@@ -24,24 +24,24 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Гостиницы</a>
+              <div class="navigation-link-current"></div>
+              <a class="navigation-link">Гостиницы</a>
             </li>
           </ul>
-
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
+          <ul class="navigation-user">
+            <li class="navigation-user-item button-search">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-user-item button-like">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span>12</span>
+                <span class="visually-hidden">Избранное.</span>
+                <span class="like-count">12</span>
               </a>
             </li>
           </ul>
-          <button type="button" class="button button-small brown">Хочу сюда!</button>
+            <button type="button" class="button button-small brown">Хочу сюда!</button>
         </nav>
       </header>
 
@@ -52,13 +52,13 @@
           <header class="catalog-header">
             <h1 class="catalog-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-index">
                 <a class="breadcrumbs-link" href="index.html">
-                  <span class="visually-hidden">Главная</span>
+                  <span class="visually-hidden">Главная.</span>
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link"><span class="breadcrumbs-text">Гостиницы<span></a>
+                <a class="breadcrumbs-link"><span class="breadcrumbs-text">Гостиницы</span></a>
               </li>
             </ul>
           </header>
@@ -123,8 +123,10 @@
         <!-- Search results -->
         <section class="search-results">
           <header class="search-header">
-            <h2 class="visually-hidden">Результаты поиска</h2>
-            <p class="list-head">Найдено гостиниц: <span>38</span></p>
+            <div class="search-total">
+              <h2 class="visually-hidden">Результаты поиска.</h2>
+              <p class="list-head">Найдено гостиниц: <span>38</span></p>
+            </div>
 
             <select class="select-control" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
@@ -132,66 +134,74 @@
               <option value="popular">Сначала популярные</option>
             </select>
 
-            <a href="#" class="button">
-              <span class="visually-hidden">Отобразить в виде таблицы</span>
-            </a>
-            <a href="#" class="button button-light">
-              <span class="visually-hidden">Отобразить карточки по одной</span>
-            </a>
-            <a href="#" class="button button-light">
-              <span class="visually-hidden">Отобразить в виде списка</span>
-            </a>
+            <ul class="results-layout-list">
+              <li class="layout layout-table layout-current">
+                <a href="#" class="button">
+                <span class="visually-hidden">Отобразить в виде таблицы.</span>
+                </a>
+              </li>
+              <li class="layout layout-card">
+                <a href="#" class="button">
+                  <span class="visually-hidden">Отобразить карточки по одной.</span>
+                </a>
+              </li>
+              <li class="layout layout-list">
+                <a href="#" class="button">
+                  <span class="visually-hidden">Отобразить в виде списка.</span>
+                </a>
+              </li>
+            </ul>
           </header>
 
           <ul class="hotel-list">
             <li class="hotel-card">
-              <article>
+              <article class="hotel-article">
                 <h3 class="hotel-title">Amara Resort & Spa</h3>
                 <img src="images/hotels/amara.jpg" alt="Гостиница Amara Resort & Spa." width="300" height="212">
                 <p>Гостиница</p>
                 <p>От 4000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Четыре звезды</span></p>
+                <p><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 8,5</p>
               </article>
             </li>
 
             <li class="hotel-card">
-              <article>
+              <article class="hotel-article">
                 <h3 class="hotel-title">Villas at Poco Diablo</h3>
                 <img src="images/hotels/poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo." width="300" height="212">
                 <p>Гостиница</p>
                 <p>От 5000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small green" type="button">В избранном</button>
-                <p><span class="visually-hidden">Четыре звезды</span></p>
+                <p><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 9,2</p>
               </article>
             </li>
 
             <li class="hotel-card">
-              <article>
+              <article class="hotel-article">
                 <h3 class="hotel-title">Desert Quail Inn</h3>
                 <img src="images/hotels/desert-quail.jpg" alt="Гостиница Desert Quail Inn." width="300" height="212">
                 <p>Гостиница</p>
                 <p>От 2500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Три звезды</span></p>
+                <p><span class="visually-hidden">Три звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 6,9</p>
               </article>
             </li>
 
             <li class="hotel-card">
-              <article>
+              <article class="hotel-article">
                 <h3 class="hotel-title">GreenTree Inn</h3>
                 <img src="images/hotels/greentree.jpg" alt="Гостиница GreenTree Inn." width="300" height="212">
                 <p>Гостиница</p>
                 <p>От 1500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Две звезды</span></p>
+                <p><span class="visually-hidden">Две звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 5,0</p>
               </article>
             </li>
@@ -237,21 +247,21 @@
       <!-- Footer -->
       <footer class="page-footer">
         <section class="footer-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты.</h2>
           <ul class="contacts-social-list">
-            <li class="contacts-social-item">
+            <li class="contacts-social-item vkontakte">
               <a class="contacts-social-link" href="#">
-                <span class="visually-hidden">ВКонтакте</span>
+                <span class="visually-hidden">ВКонтакте.</span>
               </a>
             </li>
-            <li class="contacts-social-item">
+            <li class="contacts-social-item telegram">
               <a class="contacts-social-link" href="#">
-                <span class="visually-hidden">Телеграм</span>
+                <span class="visually-hidden">Телеграм.</span>
               </a>
             </li>
-            <li class="contacts-social-item">
+            <li class="contacts-social-item youtube">
               <a class="contacts-social-link" href="#">
-                <span class="visually-hidden">YouTube</span>
+                <span class="visually-hidden">YouTube.</span>
               </a>
             </li>
           </ul>
