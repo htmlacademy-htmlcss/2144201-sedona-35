@@ -24,7 +24,8 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Гостиницы</a>
+              <div class="navigation-link-current"></div>
+              <a class="navigation-link">Гостиницы</a>
             </li>
           </ul>
           <div class="navigation-user">
@@ -53,7 +54,7 @@
           <header class="catalog-header">
             <h1 class="catalog-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-index">
                 <a class="breadcrumbs-link" href="index.html">
                   <span class="visually-hidden">Главная</span>
                 </a>
@@ -124,24 +125,34 @@
         <!-- Search results -->
         <section class="search-results">
           <header class="search-header">
-            <h2 class="visually-hidden">Результаты поиска</h2>
-            <p class="list-head">Найдено гостиниц: <span>38</span></p>
+            <div class="search-header-info">
+              <h2 class="visually-hidden">Результаты поиска</h2>
+              <p class="list-head">Найдено гостиниц: <span>38</span></p>
 
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
 
-            <a href="#" class="button">
-              <span class="visually-hidden">Отобразить в виде таблицы</span>
-            </a>
-            <a href="#" class="button button-light">
-              <span class="visually-hidden">Отобразить карточки по одной</span>
-            </a>
-            <a href="#" class="button button-light">
-              <span class="visually-hidden">Отобразить в виде списка</span>
-            </a>
+            <ul class="results-layout-list">
+              <li class="layout layout-table layout-current">
+                <a href="#" class="button">
+                <span class="visually-hidden">Отобразить в виде таблицы</span>
+                </a>
+              </li>
+              <li class="layout layout-card">
+                <a href="#" class="button">
+                  <span class="visually-hidden">Отобразить карточки по одной</span>
+                </a>
+              </li>
+              <li class="layout layout-list">
+                <a href="#" class="button">
+                  <span class="visually-hidden">Отобразить в виде списка</span>
+                </a>
+              </li>
+            </ul>
           </header>
 
           <ul class="hotel-list">
@@ -240,17 +251,17 @@
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <ul class="contacts-social-list">
-            <li class="contacts-social-item">
+            <li class="contacts-social-item vkontakte">
               <a class="contacts-social-link" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
-            <li class="contacts-social-item">
+            <li class="contacts-social-item telegram">
               <a class="contacts-social-link" href="#">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
-            <li class="contacts-social-item">
+            <li class="contacts-social-item youtube">
               <a class="contacts-social-link" href="#">
                 <span class="visually-hidden">YouTube</span>
               </a>

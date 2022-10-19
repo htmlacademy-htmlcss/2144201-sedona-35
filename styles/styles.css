@@ -169,9 +169,21 @@ fieldset {
   padding: 16px 20px;
 }
 
+/*
+.navigation-link-current {
+  position: relative;
+  background-color: #756257;
+  height: 2px;
+  width: 94px;
+  margin: 0;
+  padding: 0;
+  top: 44px;
+}
+*/
+
 .navigation-item-search {
-  width: 44px;
-  height: 64px;
+  min-width: 44px;
+  min-height: 64px;
   background-color: #FFFFFF;
   background-image: url("../images/search.svg");
   background-size: 20px;
@@ -180,8 +192,8 @@ fieldset {
 }
 
 .navigation-item-like {
-  width: 44px;
-  height: 64px;
+  min-width: 44px;
+  min-height: 64px;
   background-color: #FFFFFF;
   background-image: url("../images/like.svg");
   background-size: 20px;
@@ -414,7 +426,10 @@ recommendations-description {
 
 .breadcrumbs {
   display: flex;
-  margin: 0;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
 }
 
 .breadcrumbs-item {
@@ -422,6 +437,14 @@ recommendations-description {
   line-height: inherit;
   text-align: left;
   margin-right: 10px;
+}
+
+.breadcrumbs-index {
+  width: 12px;
+  height: 12px;
+  background-color: none;
+  background-image: url("../images/breadcrumbs-home.svg");
+  background-position: center;
 }
 
 .catalog-filter {
@@ -449,15 +472,24 @@ recommendations-description {
 }
 
 /* Search results */
-.search-header {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
 .search-results {
   padding: 70px;
   padding-top: 50px;
   padding-bottom: 60px;
+}
+
+/* Search results header */
+.search-header {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.search-header-info {
+  display: flex;
+  gap: 192px;
 }
 
 .list-head {
@@ -465,9 +497,44 @@ recommendations-description {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 auto;
+  margin: 0;
 }
 
+/* Search results layouts */
+.results-layout-list {
+  display: flex;
+  gap: 8px;
+  width: 160px;
+}
+
+.layout {
+  width: 48px;
+  height: 48px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.layout-table {
+  background-image: url("../images/layout-buttons/table.svg");
+}
+
+.layout-card {
+  background-image: url("../images/layout-buttons/card.svg");
+}
+
+.layout-list {
+  background-image: url("../images/layout-buttons/list.svg");
+}
+
+.layout-current {
+  border: 2px solid #000000;
+}
+
+/* Hotel cards */
 .hotel-list {
   display: flex;
   flex-wrap: wrap;
@@ -583,11 +650,33 @@ recommendations-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
 }
 
-.contacts-social-item {
-  padding-left: 10px;
-  padding-right: 10px;
+.contacts-social-list li {
+  width: 47px;
+  height: 40px;
+}
+
+.vkontakte {
+  background-image: url("../images/social/vkontakte.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
+}
+
+.telegram {
+  background-image: url("../images/social/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
+}
+
+.youtube {
+  background-image: url("../images/social/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
 }
 
 .contacts-phone {
