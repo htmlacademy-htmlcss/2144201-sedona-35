@@ -119,15 +119,6 @@ fieldset {
   border: 0;
 }
 
-.select-control {
-  font-family: inherit;
-  font-weight: 400;
-  padding: 14px 20px;
-  width: 292px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-}
-
 /* Header */
 .page-header {
   background-color: #FFFFFF;
@@ -142,7 +133,7 @@ fieldset {
   gap: 30px;
 }
 
-.navigation-list {
+.navigation-menu {
   display: flex;
   margin: 0;
   padding: 0;
@@ -181,24 +172,21 @@ fieldset {
 }
 */
 
-.navigation-item-search {
+.navigation-user-item {
   min-width: 44px;
   min-height: 64px;
   background-color: #FFFFFF;
-  background-image: url("../images/search.svg");
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.navigation-item-like {
-  min-width: 44px;
-  min-height: 64px;
-  background-color: #FFFFFF;
+.button-search {
+  background-image: url("../images/search.svg");
+}
+
+.button-like {
   background-image: url("../images/like.svg");
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .like-count {
@@ -484,12 +472,19 @@ recommendations-description {
   margin-top: 0;
   margin-bottom: 40px;
   width: 100%;
-  justify-content: space-between;
 }
 
-.search-header-info {
-  display: flex;
-  gap: 192px;
+.search-total {
+  margin-right: 200px;
+}
+
+.select-control {
+  font-family: inherit;
+  font-weight: 400;
+  padding: 14px 20px;
+  width: 292px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .list-head {
@@ -505,6 +500,7 @@ recommendations-description {
   display: flex;
   gap: 8px;
   width: 160px;
+  margin-left: auto;
 }
 
 .layout {
