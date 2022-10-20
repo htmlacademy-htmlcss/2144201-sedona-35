@@ -430,6 +430,29 @@ recommendations-description {
 .catalog-filter-group {
   margin: 0;
   padding: 0;
+  margin-right: 70px;
+}
+
+.filter-price {
+  display: grid;
+  grid-template-columns: 143px 143px;
+  grid-template-areas: "title title"
+                       "range-start range-end"
+                       "range range";
+  margin-left: auto;
+}
+
+.catalog-filter-title .price {
+  grid-area: title;
+}
+.price-range .start{
+  grid-area: range-start;
+}
+.price-range .end {
+  grid-area: range-end;
+}
+.price-range .range {
+  grid-area: range;
 }
 
 .catalog-filter-title {
@@ -438,6 +461,14 @@ recommendations-description {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 32px;
+}
+
+.catalog-filter-item {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .catalog-filter-buttons {
@@ -549,7 +580,7 @@ recommendations-description {
   grid-template-columns: 1fr 1fr;
   grid-template-areas:"image"
                       "title"
-                      "hotel-name hotel-price"
+                      "hotel-type hotel-price"
                       "button-details button-like"
                       "hotel-stars button-rate";
   gap: 16px 20px;
@@ -572,7 +603,7 @@ recommendations-description {
   line-height: 28px;
 }
 
-.hotel-name {
+.hotel-type {
   grid-area: name;
   grid-column: 1/2;
   grid-row: 3/4;
