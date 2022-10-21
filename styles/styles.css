@@ -107,14 +107,6 @@ input {
   color: #00000060;
 }
 
-.price-range {
-  padding: 0;
-  color: #000000;
-  font-size: inherit;
-  font-weight: 700;
-  padding: 12px 20px;
-}
-
 fieldset {
   border: 0;
 }
@@ -433,13 +425,23 @@ recommendations-description {
   margin-right: 70px;
 }
 
+.price-range {
+  padding: 0;
+  color: #000000;
+  font-size: inherit;
+  font-weight: 700;
+  padding: 12px 20px;
+}
+
 .filter-price {
   display: grid;
-  grid-template-columns: 143px 143px;
+  height: 143px;
+  grid-template-columns: repeat(2, 143px);
   grid-template-areas: "title title"
                        "range-start range-end"
                        "range range";
   margin-left: auto;
+  gap: 2px;
 }
 
 .catalog-filter-title .price {
@@ -448,9 +450,17 @@ recommendations-description {
 .price-range .start{
   grid-area: range-start;
 }
+.start {
+  border-radius: 4px 0 0 4px;
+}
+
 .price-range .end {
   grid-area: range-end;
 }
+.end {
+  border-radius: 0 4px 4px 0;
+}
+
 .price-range .range {
   grid-area: range;
 }
@@ -554,16 +564,13 @@ recommendations-description {
 
 /* Hotel cards */
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
   margin-bottom: 40px;
 }
 
 .hotel-card {
-  display: flex;
-  align-items: stretch;
-  width: 340px;
   box-sizing: border-box;
   border: solid 1px #E6E6E6;
   border-radius: 4px;
@@ -577,26 +584,21 @@ recommendations-description {
 
 .hotel-article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:"image"
-                      "title"
-                      "hotel-type hotel-price"
-                      "button-details button-like"
-                      "hotel-stars button-rate";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 212px min-content min-content auto auto;
   gap: 16px 20px;
-  align-items: center;
 }
 
-.hotel-image {
+.hotel-article img {
+  width: 300px;
+  object-fit: cover;
   order: -1;
-  grid-area: image;
-  grid-column: 1/3;
+  grid-column: 1/-1;
   grid-row: 1/2;
 }
 
-.hotel-title {
-  grid-area: title;
-  grid-column: 1/3;
+.hotel-article h3 {
+  grid-column: 1/-1;
   grid-row: 2/3;
   font-weight: 700;
   font-size: 24px;
@@ -604,13 +606,11 @@ recommendations-description {
 }
 
 .hotel-type {
-  grid-area: name;
   grid-column: 1/2;
   grid-row: 3/4;
 }
 
 .hotel-price {
-  grid-area: price;
   grid-column: 2/3;
   grid-row: 3/4;
   justify-self: end;
@@ -620,26 +620,23 @@ recommendations-description {
   padding: 8px 0;
 }
 
-.button-details {
-  grid-area: button-details;
+.hotel-article .button .button-small .brown {
   grid-column: 1/2;
   grid-row: 4/5;
 }
 
-.button-liked {
-  grid-area: button-like;
+.hotel-article .button .button-small .green,
+.hotel-article .button .button-small .blue {
   grid-column: 2/3;
   grid-row: 4/5;
 }
 
 .hotel-stars {
-  grid-area: stars;
   grid-column: 1/2;
   grid-row: 5/6;
 }
 
-.button-rate {
-  grid-area: button-rate;
+.hotel-article .button .button-small .grey {
   grid-column: 2/3;
   grid-row: 5/6;
 }
