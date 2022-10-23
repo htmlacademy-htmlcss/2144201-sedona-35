@@ -107,12 +107,13 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <input class="price-range" type="number" placeholder="0">от
-              <input class="price-range" type="number" placeholder="9000">до
-              <input type="range">
+            <fieldset class="catalog-filter-group filter-price">
+              <legend class="catalog-filter-title price">Стоимость, ₽:</legend>
+              <input class="price-range start" type="number" placeholder="0">
+              <input class="price-range end" type="number" placeholder="9000">
+              <input class="price-range range" type="range">
             </fieldset>
+
             <div class="catalog-filter-buttons">
               <button class="button button-small blue" type="submit">Применить</button>
               <button class="button button-small transparent" type="reset">Сбросить</button>
@@ -156,52 +157,52 @@
           <ul class="hotel-list">
             <li class="hotel-card">
               <article class="hotel-article">
-                <h3 class="hotel-title">Amara Resort & Spa</h3>
-                <img src="images/hotels/amara.jpg" alt="Гостиница Amara Resort & Spa." width="300" height="212">
-                <p>Гостиница</p>
-                <p>От 4000 ₽</p>
+                <h3>Amara Resort & Spa</h3>
+                <img src="images/hotels/amara.jpg" alt="Гостиница Amara Resort & Spa.">
+                <p class="hotel-type">Гостиница</p>
+                <p class="hotel-price">От 4000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Четыре звезды.</span></p>
+                <p class="hotel-stars"><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 8,5</p>
               </article>
             </li>
 
             <li class="hotel-card">
               <article class="hotel-article">
-                <h3 class="hotel-title">Villas at Poco Diablo</h3>
-                <img src="images/hotels/poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo." width="300" height="212">
-                <p>Гостиница</p>
-                <p>От 5000 ₽</p>
+                <h3>Villas at Poco Diablo</h3>
+                <img src="images/hotels/poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo.">
+                <p class="hotel-type">Гостиница</p>
+                <p class="hotel-price">От 5000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small green" type="button">В избранном</button>
-                <p><span class="visually-hidden">Четыре звезды.</span></p>
+                <p class="hotel-stars"><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 9,2</p>
               </article>
             </li>
 
             <li class="hotel-card">
               <article class="hotel-article">
-                <h3 class="hotel-title">Desert Quail Inn</h3>
-                <img src="images/hotels/desert-quail.jpg" alt="Гостиница Desert Quail Inn." width="300" height="212">
-                <p>Гостиница</p>
-                <p>От 2500 ₽</p>
+                <h3>Desert Quail Inn</h3>
+                <img src="images/hotels/desert-quail.jpg" alt="Гостиница Desert Quail Inn.">
+                <p class="hotel-type">Гостиница</p>
+                <p class="hotel-price">От 2500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Три звезды.</span></p>
+                <p class="hotel-stars"><span class="visually-hidden">Три звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 6,9</p>
               </article>
             </li>
 
             <li class="hotel-card">
               <article class="hotel-article">
-                <h3 class="hotel-title">GreenTree Inn</h3>
-                <img src="images/hotels/greentree.jpg" alt="Гостиница GreenTree Inn." width="300" height="212">
-                <p>Гостиница</p>
-                <p>От 1500 ₽</p>
+                <h3>GreenTree Inn</h3>
+                <img src="images/hotels/greentree.jpg" alt="Гостиница GreenTree Inn.">
+                <p class="hotel-type">Гостиница</p>
+                <p class="hotel-price">От 1500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p><span class="visually-hidden">Две звезды.</span></p>
+                <p class="hotel-stars"><span class="visually-hidden">Две звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 5,0</p>
               </article>
             </li>
