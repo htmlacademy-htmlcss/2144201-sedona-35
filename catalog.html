@@ -12,7 +12,7 @@
       <!-- Header -->
       <header class="page-header">
         <nav class="navigation">
-          <a class="navigation-link" href="index.html">
+          <a class="navigation-logo" href="index.html">
             <img class="header-logo" src="images/header-logo.svg" alt="Герб Седоны." height="70" width="140">
           </a>
 
@@ -24,8 +24,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <div class="navigation-link-current"></div>
-              <a class="navigation-link">Гостиницы</a>
+                <a class="navigation-link-current">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -41,7 +40,7 @@
               </a>
             </li>
           </ul>
-            <button type="button" class="button button-small brown">Хочу сюда!</button>
+          <button type="button" class="button button-small brown">Хочу сюда!</button>
         </nav>
       </header>
 
@@ -107,11 +106,15 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group filter-price">
-              <legend class="catalog-filter-title price">Стоимость, ₽:</legend>
-              <input class="price-range start" type="number" placeholder="0">
-              <input class="price-range end" type="number" placeholder="9000">
-              <input class="price-range range" type="range">
+            <fieldset class="catalog-filter-group-price">
+              <div class="filter-price">
+                <legend class="catalog-filter-title price">Стоимость, ₽:</legend>
+                <input class="price-range start" type="number" placeholder="0" id="start">
+                <label for="start" class="from">от</label>
+                <input class="price-range end" type="number" placeholder="9000" id="end">
+                <label for="end" class="to">до</label>
+                <input class="price-range range" type="range">
+              </div>
             </fieldset>
 
             <div class="catalog-filter-buttons">
@@ -158,12 +161,12 @@
             <li class="hotel-card">
               <article class="hotel-article">
                 <h3>Amara Resort & Spa</h3>
-                <img src="images/hotels/amara.jpg" alt="Гостиница Amara Resort & Spa.">
+                <img src="images/hotels/amara.jpg" alt="Гостиница Amara Resort & Spa." width="300" height="212">
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 4000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p class="hotel-stars"><span class="visually-hidden">Четыре звезды.</span></p>
+                <p class="hotel-stars hotel-stars-4"><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 8,5</p>
               </article>
             </li>
@@ -176,7 +179,7 @@
                 <p class="hotel-price">От 5000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small green" type="button">В избранном</button>
-                <p class="hotel-stars"><span class="visually-hidden">Четыре звезды.</span></p>
+                <p class="hotel-stars hotel-stars-4"><span class="visually-hidden">Четыре звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 9,2</p>
               </article>
             </li>
@@ -189,7 +192,7 @@
                 <p class="hotel-price">От 2500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p class="hotel-stars"><span class="visually-hidden">Три звезды.</span></p>
+                <p class="hotel-stars hotel-stars-3"><span class="visually-hidden">Три звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 6,9</p>
               </article>
             </li>
@@ -202,7 +205,7 @@
                 <p class="hotel-price">От 1500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
                 <button class="button button-small blue" type="button">В избранное</button>
-                <p class="hotel-stars"><span class="visually-hidden">Две звезды.</span></p>
+                <p class="hotel-stars hotel-stars-2"><span class="visually-hidden">Две звезды.</span></p>
                 <p class="button button-small grey">Рейтинг: 5,0</p>
               </article>
             </li>
@@ -211,7 +214,7 @@
           <footer class="search-footer">
             <ul class="pagination">
               <li class="pagination-item pagination-current">
-                <a class="pagination-link ">1</a>
+                <a class="pagination-link">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
@@ -222,7 +225,7 @@
               <li class="pagination-item">
                 <a class="pagination-link" href="#">4</a>
               </li>
-              <li class="pagination-item pagination-dots">
+              <li class="pagination-dots">
                 <a class="pagination-link">...</a>
               </li>
               <li class="pagination-item">
