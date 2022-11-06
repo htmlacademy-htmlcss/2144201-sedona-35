@@ -176,7 +176,6 @@ input:active {
   background: #F2F2F2;
   border: 2px solid #000000;
 }
-
 fieldset {
   border: 0;
 }
@@ -350,10 +349,11 @@ fieldset {
 }
 
 .advantages-item article,
-.recommendations-item article,
 .advantages-picture-text div {
   padding-left: 85px;
   padding-right: 85px;
+  padding-top: 92px;
+  padding-bottom: 111px;
 }
 
 .advantages-item:nth-child(4n-3) {
@@ -377,30 +377,30 @@ fieldset {
   justify-content: center;
   align-items: center;
 }
-
 .recommendations-item:nth-child(odd) {
   background-color: #82B3D31F;
 }
-
 .recommendations-item:nth-child(1) > article {
   background-image: url("../images/recommendations/house.svg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 102px;
 }
-
 .recommendations-item:nth-child(2) > article {
   background-image: url("../images/recommendations/food.svg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 102px;
 }
-
 .recommendations-item:nth-child(3) > article {
   background-image: url("../images/recommendations/souvenir.svg");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 102px;
+}
+.recommendations-item article {
+  padding-left: 85px;
+  padding-right: 85px;
 }
 
 .advantages-title,
@@ -416,20 +416,30 @@ fieldset {
 .advantages-title {
   margin-bottom: 62px;
 }
-.advantages-item > article {
+.advantages-text {
   position: relative;
-  padding-top: 103px;
-  padding-bottom: 121px;
 }
 
-.advantages-title::before {
+.advantages-title::after {
   position: absolute;
   content: "";
   width: 60px;
   height: 2px;
   background-color: #00000030;
   right: 170px;
-  top: 190px;
+  top: 180px;
+}
+.picture-text {
+  position: relative;
+}
+.picture-text > .advantages-title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #FFFFFF30;
+  right: 170px;
+  top: 180px;
 }
 
 .advantages-description,
@@ -510,6 +520,7 @@ recommendations-description {
   background-size: cover;
   padding: 70px;
   padding-top: 35px;
+  padding-right: 43px;
 }
 
 .catalog-header-title {
@@ -804,6 +815,7 @@ recommendations-description {
   font-family: inherit;
   font-weight: 400;
   padding: 14px 20px;
+  padding-right: 50px;
   width: 292px;
   color: #333333;
   border: 2px solid #E5E5E5;
@@ -811,7 +823,7 @@ recommendations-description {
   appearance: none;
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
-  background-position: 260px center;
+  background-position: right 20px center;
 }
 .select-control:hover {
   border: 2px solid #68A2CA;
@@ -1135,3 +1147,198 @@ recommendations-description {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* Modal form */
+.modal-container {
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+width: 100%;
+height: 100%;
+background-color: #F2F2F280;
+z-index: 3;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 25px 50px #00000015;
+  border-radius: 30px;
+  padding: 64px 70px;
+}
+.modal-search {
+  width: 717px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 68px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  border: 3px solid #83B3D300;
+  background-image: url("../images/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+.modal-close-button:focus {
+  border: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+.modal-close-button:active {
+  border: 3px solid #83B3D300;
+  background-color: #E6E6E6;
+  opacity: 30%;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+.modal-form {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 110px);
+  grid-template-rows: repeat(5, 48px);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 48px;
+}
+.modal-form label {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.modal-form p {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 4px;
+  margin-bottom: auto;
+  padding: 0px 20px;
+  font-size: 16px;
+}
+.forbidden {
+  color: #FF5757;
+}
+.date-start-label {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.date-start {
+  appearance: none;
+  border-radius: 4px;
+  grid-row: 1/2;
+  grid-column: 2/-1;
+}
+.date-start-caption {
+  grid-row: 2/3;
+  grid-column: 2/-1;
+}
+
+.date-end-label {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.date-end {
+  border-radius: 4px;
+  grid-row: 3/4;
+  grid-column: 2/-1;
+}
+.date-end-caption {
+  grid-row: 4/5;
+  grid-column: 2/-1;
+}
+
+.adults-label {
+  grid-row: 5/-1;
+  grid-column: 1/2;
+}
+.adults-wrapper {
+  grid-row: 5/-1;
+  grid-column: 2/3;
+  display: flex;
+}
+.adults,
+.kids {
+  min-width: 31px;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 7px;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+}
+.modal-button-minus {
+  min-width: 40px;
+  padding: 14px 10px;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-image: url("../images/modal-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.modal-button-plus {
+  min-width: 40px;
+  padding: 14px 10px;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-image: url("../images/modal-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.kids-label {
+  grid-row: 5/-1;
+  grid-column: 3/5;
+  display: flex;
+  justify-content: right;
+  padding-right: 82px;
+}
+.kids-wrapper {
+  grid-row: 5/-1;
+  grid-column: 5/-1;
+  display: flex;
+}
+
+.modal-submit-button {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #82B3D3;
+}
+.modal-submit-button:hover {
+  background: #68A2CA;
+  border-radius: 10px;
+}
+.modal-submit-button:focus {
+  background: #68A2CA;
+  border-radius: 10px;
+}
+.modal-submit-button:active {
+  background: #82B3D3;
+  border-radius: 10px;
+  color: #FFFFFF30;
+}
+/*.modal-container-close {
+  display: none;
+}*/
