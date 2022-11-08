@@ -1121,8 +1121,14 @@ recommendations-description {
 .contacts-logo-academy {
   cursor: pointer;
 }
+.contacts-logo-academy:hover {
+  fill: #756157;
+}
+.contacts-logo-academy:focus {
+  fill: #756157;
+}
 .contacts-logo-academy:active {
-  opacity: 30%;
+  fill: #7561574D;
 }
 
 .visually-hidden {
