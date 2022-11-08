@@ -122,9 +122,9 @@
             <fieldset class="catalog-filter-range">
               <legend class="catalog-filter-title price">Стоимость, ₽:</legend>
               <div class="filter-price">
-                <input class="price-range max" type="number" placeholder="0" id="start">
+                <input class="price-range min" type="number" placeholder="0" id="start">
                 <label for="start" class="from">от</label>
-                <input class="price-range min" type="number" placeholder="9000" id="end">
+                <input class="price-range max" type="number" placeholder="9000" id="end">
                 <label for="end" class="to">до</label>
                 <div class="range-scale">
                   <div class="range-bar" style="right: 61px; width: 226px">
@@ -302,35 +302,36 @@
 
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button">
+          <button type="button" class="modal-close-button">
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-            <fieldset class="modal-form">
-              <label for="date-start" class="date-start-label">Дата заезда:</label>
-              <input class="date-start" id="date-start" type="date" value="27 апреля 2020">
-              <p class="date-start-caption forbidden">Мы не можем отправить вас в прошлое.</p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="modal-form">
+                <label for="date-start" class="date-start-label">Дата заезда:</label>
+                <input class="date-start" id="date-start" type="date" value="27 апреля 2020">
+                <p class="date-start-caption forbidden">Мы не можем отправить вас в прошлое.</p>
 
-              <label for="date-end" class="date-end-label">Дата выезда:</label>
-              <input class="date-end" id="date-end" type="date" value="1 сентября 2021">
-              <p class="date-end-caption">На эти даты есть свободные номера. Пока есть.</p>
+                <label for="date-end" class="date-end-label">Дата выезда:</label>
+                <input class="date-end" id="date-end" type="date" value="1 сентября 2021">
+                <p class="date-end-caption">На эти даты есть свободные номера. Пока есть.</p>
 
-              <label for="adults" class="adults-label">Взрослые:</label>
-              <div class="adults-wrapper">
-                <button type="button" class="modal-button-minus"></button>
-                <input class="adults" id="adults" type="text" value="2">
-                <button type="button" class="modal-button-plus"></button>
-              </div>
+                <label for="adults" class="adults-label">Взрослые:</label>
+                <div class="adults-wrapper">
+                  <button type="button" class="modal-button-minus"></button>
+                  <input class="adults" id="adults" type="text" value="2">
+                  <button type="button" class="modal-button-plus"></button>
+                </div>
 
-              <label for="kids" class="kids-label">Дети:</label>
-              <div class="kids-wrapper">
-                <button type="button" class="modal-button-minus"></button>
-                <input class="kids" id="kids" type="text" value="2">
-                <button type="button" class="modal-button-plus"></button>
-              </div>
-
-            </fieldset>
+                <label for="kids" class="kids-label">Дети:</label>
+                <div class="kids-wrapper">
+                  <button type="button" class="modal-button-minus"></button>
+                  <input class="kids" id="kids" type="text" value="2">
+                  <button type="button" class="modal-button-plus"></button>
+                </div>
+              </fieldset>
+            </form>
           </section>
           <button type="submit" class="button button-big modal-submit-button">Найти</button>
         </div>
