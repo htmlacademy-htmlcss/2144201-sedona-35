@@ -198,35 +198,47 @@
       </footer>
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button">
+          <button type="button" class="modal-close-button">
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-            <fieldset class="modal-form">
-              <label for="date-start" class="date-start-label">Дата заезда:</label>
-              <input class="date-start" id="date-start" type="date" value="27 апреля 2020">
-              <p class="date-start-caption forbidden">Мы не можем отправить вас в прошлое.</p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="modal-form">
+                <label for="date-start" class="date-start-label">Дата заезда:</label>
+                <input class="date-start" id="date-start" type="text" placeholder="Укажите дату" value="27 апреля 2020">
+                <p class="date-start-caption forbidden">Мы не можем отправить вас в прошлое.</p>
 
-              <label for="date-end" class="date-end-label">Дата выезда:</label>
-              <input class="date-end" id="date-end" type="date" value="1 сентября 2021">
-              <p class="date-end-caption">На эти даты есть свободные номера. Пока есть.</p>
+                <label for="date-end" class="date-end-label">Дата выезда:</label>
+                <input class="date-end" id="date-end" type="text" placeholder="Укажите дату" value="1 сентября 2021">
+                <p class="date-end-caption">На эти даты есть свободные номера. Пока есть.</p>
 
-              <label for="adults" class="adults-label">Взрослые:</label>
-              <div class="adults-wrapper">
-                <button type="button" class="modal-button-minus"></button>
-                <input class="adults" id="adults" type="text" value="2">
-                <button type="button" class="modal-button-plus"></button>
-              </div>
+                <label for="adults" class="adults-label">Взрослые:</label>
+                <div class="adults-wrapper">
+                  <button type="button" class="modal-button-minus"></button>
+                  <input class="adults" id="adults" type="text" value="2">
+                  <button type="button" class="modal-button-plus"></button>
+                </div>
 
-              <label for="kids" class="kids-label">Дети:</label>
-              <div class="kids-wrapper">
-                <button type="button" class="modal-button-minus"></button>
-                <input class="kids" id="kids" type="text" value="2">
-                <button type="button" class="modal-button-plus"></button>
-              </div>
-
-            </fieldset>
+                <span class="kids-label kids-label-icon">
+                  <label for="kids" class="kids-label">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="#83B3D3" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="inherit"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="kids-wrapper">
+                  <button type="button" class="modal-button-minus"></button>
+                  <input class="kids" id="kids" type="text" value="2">
+                  <button type="button" class="modal-button-plus"></button>
+                </div>
+              </fieldset>
+            </form>
           </section>
           <button type="submit" class="button button-big modal-submit-button">Найти</button>
         </div>
