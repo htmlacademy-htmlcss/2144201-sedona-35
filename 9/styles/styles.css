@@ -1263,6 +1263,10 @@ z-index: 3;
   border-radius: 4px;
   grid-row: 1/2;
   grid-column: 2/-1;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 50px;
   background-image: url("../images/date.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
@@ -1278,12 +1282,40 @@ z-index: 3;
 }
 .date-end {
   border-radius: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 50px;
   grid-row: 3/4;
   grid-column: 2/-1;
   background-image: url("../images/date.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
 }
+.date-start:hover,
+.date-end:hover {
+  background-color: #E6E6E6;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+.date-start:focus,
+.date-end:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+.date-start:active,
+.date-end:active {
+  background-color: #E6E6E6;
+  outline: 2px solid #000000;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+
 .date-end-caption {
   grid-row: 4/5;
   grid-column: 2/-1;
