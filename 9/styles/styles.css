@@ -1248,6 +1248,10 @@ z-index: 3;
   padding: 0px 20px;
   font-size: 16px;
 }
+.modal-form > input {
+  font-weight: 700;
+  color: #000000;
+}
 .forbidden {
   color: #FF5757;
 }
@@ -1256,10 +1260,12 @@ z-index: 3;
   grid-column: 1/2;
 }
 .date-start {
-  appearance: none;
   border-radius: 4px;
   grid-row: 1/2;
   grid-column: 2/-1;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
 }
 .date-start-caption {
   grid-row: 2/3;
@@ -1274,6 +1280,9 @@ z-index: 3;
   border-radius: 4px;
   grid-row: 3/4;
   grid-column: 2/-1;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
 }
 .date-end-caption {
   grid-row: 4/5;
