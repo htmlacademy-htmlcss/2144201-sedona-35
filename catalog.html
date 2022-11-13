@@ -3,6 +3,23 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -121,9 +138,9 @@
             <fieldset class="catalog-filter-range">
               <legend class="catalog-filter-title price">Стоимость, ₽:</legend>
               <div class="filter-price">
-                <input class="price-range min" type="number" placeholder="0" id="start">
+                <input class="price-range min" type="number" placeholder="0" id="start" name="min-price">
                 <label for="start" class="from">от</label>
-                <input class="price-range max" type="number" placeholder="9000" id="end">
+                <input class="price-range max" type="number" placeholder="9000" id="end" name="max-price">
                 <label for="end" class="to">до</label>
                 <div class="range-scale">
                   <div class="range-bar" style="right: 61px; width: 226px">
@@ -195,7 +212,7 @@
             <li class="hotel-card">
               <article class="hotel-article">
                 <h3>Villas at Poco Diablo</h3>
-                <img src="images/hotels/poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo.">
+                <img src="images/hotels/poco-diablo.jpg" alt="Гостиница Villas at Poco Diablo." width="300" height="212">
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 5000 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
@@ -208,7 +225,7 @@
             <li class="hotel-card">
               <article class="hotel-article">
                 <h3>Desert Quail Inn</h3>
-                <img src="images/hotels/desert-quail.jpg" alt="Гостиница Desert Quail Inn.">
+                <img src="images/hotels/desert-quail.jpg" alt="Гостиница Desert Quail Inn." width="300" height="212">
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 2500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
@@ -221,7 +238,7 @@
             <li class="hotel-card">
               <article class="hotel-article">
                 <h3>GreenTree Inn</h3>
-                <img src="images/hotels/greentree.jpg" alt="Гостиница GreenTree Inn.">
+                <img src="images/hotels/greentree.jpg" alt="Гостиница GreenTree Inn." width="300" height="212">
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-price">От 1500 ₽</p>
                 <a class="button button-small brown" href="#">Подробнее</a>
@@ -262,7 +279,7 @@
           <p class="subscribe-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="form-container">
-              <input class="subscribe-input" type="email" name="subscribe-input" id="subscribe-input" placeholder="Ваш e-mail">
+              <input class="subscribe-input" type="email" name="subscribe" id="subscribe-input" placeholder="Ваш e-mail">
               <button type="submit" class="button button-big blue">Подписаться</button>
             </div>
             </form>
@@ -303,7 +320,8 @@
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
           <a href="https://htmlacademy.ru/">
-            <svg class="contacts-logo-academy" alt="HTML-Академия." width="115" height="34" viewBox="0 0 115 34" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <span class="visually-hidden">Логотип HTML-Академии.</span>
+            <svg class="contacts-logo-academy" width="115" height="34" viewBox="0 0 115 34" fill="black" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="inherit"/>
               <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="inherit"/>
               <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z" fill="inherit"/>
@@ -321,6 +339,7 @@
         </section>
       </footer>
 
+      <!-- Modal -->
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
           <button type="button" class="modal-close-button">
@@ -331,19 +350,27 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="modal-form">
                 <label for="date-start" class="date-start-label">Дата заезда:</label>
-                <input class="date-start" id="date-start" type="text" placeholder="Укажите дату" value="27 апреля 2020">
+                <input class="date-start" id="date-start" type="text" placeholder="Укажите дату" value="27 апреля 2020" name="start-date" required>
                 <p class="date-start-caption forbidden">Мы не можем отправить вас в прошлое.</p>
 
                 <label for="date-end" class="date-end-label">Дата выезда:</label>
-                <input class="date-end" id="date-end" type="text" placeholder="Укажите дату" value="1 сентября 2021">
+                <input class="date-end" id="date-end" type="text" placeholder="Укажите дату" value="1 сентября 2021" name="end-date" required>
                 <p class="date-end-caption">На эти даты есть свободные номера. Пока есть.</p>
 
                 <label for="adults" class="adults-label">Взрослые:</label>
                 <div class="adults-wrapper">
                   <button type="button" class="modal-button-minus">
+                    <span class="visually-hidden">Меньше.</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9V11H17V9H3Z"/>
+                    </svg>
                   </button>
-                  <input class="adults" id="adults" type="text" value="2">
+                  <input class="adults" id="adults" type="text" value="2" name="adults" required>
                   <button type="button" class="modal-button-plus">
+                    <span class="visually-hidden">Больше.</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                    </svg>
                   </button>
                 </div>
 
@@ -361,15 +388,23 @@
                 </span>
                 <div class="kids-wrapper">
                   <button type="button" class="modal-button-minus">
+                    <span class="visually-hidden">Меньше.</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9V11H17V9H3Z"/>
+                    </svg>
                   </button>
-                  <input class="kids" id="kids" type="text" value="2">
+                  <input class="kids" id="kids" type="text" value="2" name="kids">
                   <button type="button" class="modal-button-plus">
+                    <span class="visually-hidden">Больше.</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                    </svg>
                   </button>
                 </div>
               </fieldset>
+              <button type="submit" class="button button-big modal-submit-button">Найти</button>
             </form>
           </section>
-          <button type="submit" class="button button-big modal-submit-button">Найти</button>
         </div>
       </div>
     </div>
