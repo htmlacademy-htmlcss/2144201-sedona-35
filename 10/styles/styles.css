@@ -84,6 +84,7 @@ ul {
 .brown:focus {
   background-color: #615048;
   border-radius: 4px;
+  outline: none;
 }
 .brown:active {
   background-color: #756157;
@@ -101,6 +102,7 @@ ul {
 .blue:focus {
   background-color: #68A2CA;
   border-radius: 4px;
+  outline: none;
 }
 .blue:active {
   background-color: #82B3D3;
@@ -118,6 +120,7 @@ ul {
 .green:focus {
   background-color: #6C9E42;
   border-radius: 4px;
+  outline: none;
 }
 .green:active {
   background-color: #7DB54F;
@@ -255,8 +258,7 @@ fieldset {
   background-image: url("../images/search.svg");
   cursor: pointer;
 }
-.navigation-user-item:hover,
-.navigation-item:hover {
+.navigation-link:hover {
   opacity: 60%;
 }
 
@@ -560,10 +562,10 @@ fieldset {
   line-height: inherit;
   text-align: left;
 }
-.breadcrumbs-item:hover {
+.breadcrumbs-link:hover {
   opacity: 60%;
 }
-.breadcrumbs-item:active {
+.breadcrumbs-link:active {
   opacity: 30%;
 }
 
@@ -640,13 +642,13 @@ fieldset {
   display: block;
   padding-left: 36px;
 }
-.control:hover {
+.control-input:hover {
   opacity: 60%;
 }
-.control:focus + .control-mark {
+.control-input:focus + .control-mark {
   outline: 3px solid #83B3D3;
 }
-.control:active {
+.control-input:active {
   outline: none;
   opacity: 30%;
 }
@@ -659,7 +661,6 @@ fieldset {
   background-color: #FFFFFF;
   border-radius: 4px;
 }
-
 .control-input +.control-mark:focus {
   outline: 3px solid #83B3D3;
 }
@@ -884,13 +885,13 @@ fieldset {
   box-sizing: border-box;
 }
 .layout:hover {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 .layout:focus {
-  border: 2px solid #68A2CA;
+  outline: 2px solid #68A2CA;
 }
 .layout:active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .layout-table {
@@ -1035,6 +1036,8 @@ fieldset {
   align-items: center;
   justify-content: center;
   background-color: #82B3D3;
+  border: 1px solid #82B3D3;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -1048,6 +1051,9 @@ fieldset {
 }
 .pagination-item:focus {
   background-color: #68A2CA;
+}
+.pagination-item:first-of-type {
+  border: 1px solid #82B3D300;
 }
 .pagination-item > .pagination-link:active {
   color: #FFFFFF4D;
