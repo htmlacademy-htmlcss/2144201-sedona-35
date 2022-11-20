@@ -184,7 +184,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-bottom: 2px;
 }
 
 .navigation-user {
@@ -225,7 +224,7 @@ body {
   background-color: #756257;
   right: 16px;
   left: 16px;
-  top: 66px;
+  top: 64px;
 }
 
 .navigation-user-link {
@@ -438,6 +437,9 @@ body {
 }
 .advantages-picture-title::before {
   background-color: #FFFFFF4D;
+}
+.recommendations-title {
+  margin-bottom: 30px;
 }
 
 .advantages-description,
@@ -1563,6 +1565,6 @@ z-index: 3;
 }
 
 /* Чтобы отобразить модальное окно, закомментируйте код: */
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
